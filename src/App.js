@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+// import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import User from './User/User.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  word1 = "Hello";
+  word2 = "world!";
+  word3 = "Goodbye!"
+  render() {
+    return (
+      <div>
+        <center>
+          <User
+            sendword1={this.word1}
+            sendword2={this.word2}
+            sendword3={this.word3}
+          ></User>
+        </center>
+      </div>
+
+    );
+  }
 }
 
 export default App;
