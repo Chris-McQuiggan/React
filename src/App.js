@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import User from './User/User.js'
+import Time from './time/time.js'
 
 class App extends Component {
   word1 = "Hello";
@@ -11,6 +12,7 @@ class App extends Component {
     return (
       <div>
         <center>
+          <Time />
           <User
             sendword1={this.word1}
             sendword2={this.word2}
